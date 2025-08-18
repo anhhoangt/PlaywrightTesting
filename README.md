@@ -6,4 +6,4 @@ npx playwright test practice/TestCasesPage.spec.js --debug --headed --project=ch
 
 replace test files under practice folder to execute all the test suites
 
-add some more test
+add some more test..
