@@ -101,7 +101,7 @@ test('mocks a successful API response', async ({ page }) => {
   await expect(page.locator('#success-message')).toContainText('Form submitted successfully');
 });
 ```
-Replace `YOUR_APPLICATION_URL/form` with the actual form URL.
+Replace `YOUR_APPLICATION_URL/form` with the actual form URL...
 ```
 
 
