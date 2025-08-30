@@ -1,6 +1,8 @@
 const { PlaywrightTestConfig, defineConfig } = require("@playwright/test");
 
 const config = {
+  testDir: "./",
+  testMatch: ["**/*.spec.js", "**/*.spec.ts"],
   retries: 0,
   timeout: 30000,
   reporter: [["list"], ["./reporter.js"]],
@@ -16,15 +18,15 @@ const config = {
   projects: [
     {
       name: "Chrome",
-      use: { browswerName: "chromium" },
+      use: { browserName: "chromium" },
     },
     {
       name: "Firefox",
-      use: { browswerName: "firefox" },
+      use: { browserName: "firefox" },
     },
     {
       name: "WebKit", // WebKit is the engine that powers Safari
-      use: { browswerName: "webkit" },
+      use: { browserName: "webkit" },
     },
   ],
 };

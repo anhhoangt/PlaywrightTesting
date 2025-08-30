@@ -98,6 +98,40 @@ class TestData {
     const timestamp = Date.now();
     return `TestUser${timestamp}`;
   }
+
+  static getContactFormData() {
+    return {
+      name: "John Doe",
+      email: "john.doe@example.com",
+      subject: "Test Inquiry",
+      message: "This is a test message for the contact form. Please ignore this automated test message."
+    };
+  }
+
+  static getProductReviewData() {
+    return {
+      name: "Test Reviewer",
+      email: "reviewer@example.com",
+      review: "This is an excellent product! I highly recommend it to everyone. Great quality and fast delivery."
+    };
+  }
+
+  static getSearchTerms() {
+    return {
+      validSearch: "blue top",
+      invalidSearch: "nonexistentproduct123",
+      partialSearch: "dress"
+    };
+  }
+
+  static getSubscriptionEmail() {
+    const timestamp = Date.now();
+    return `newsletter${timestamp}@example.com`;
+  }
+
+  static getTestFilePath() {
+    return "./uploadFile/monkey-1.png";
+  }
 }
 
 module.exports = TestData;

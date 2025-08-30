@@ -104,10 +104,137 @@ practice/
 └── README.md
 ```
 
+## Additional Test Cases Added
+
+### 5. New Comprehensive Test Suites
+Created additional test suites covering more functionality:
+
+#### **Product Search and Management** (`productSearch.spec.js`)
+- Search for existing products
+- Search for non-existing products
+- View product details
+- Add single/multiple products to cart
+- Change product quantity
+- Add product reviews
+
+#### **Contact Us Functionality** (`contactUs.spec.js`)
+- Submit contact form with valid data
+- Submit contact form with file attachment
+- Verify form validation for required fields
+- Test invalid email format handling
+
+#### **Newsletter Subscription** (`subscription.spec.js`)
+- Subscribe to newsletter from homepage
+- Verify subscription section visibility
+- Test invalid email format validation
+- Test empty email validation
+
+#### **Website Navigation and UI** (`navigation.spec.js`)
+- Verify homepage elements visibility
+- Test footer elements and subscription
+- Test scroll to top functionality
+- Verify brand logos display
+- Navigate to different pages
+- Test responsive design across viewports
+- Verify page titles and URLs
+
+#### **End-to-End User Workflows** (`e2eWorkflows.spec.js`)
+- Complete user journey: Browse → Search → Cart → Contact
+- Guest user shopping workflow
+- Registered user complete purchase workflow
+- Product review and recommendation workflow
+- Multi-browser compatibility testing
+- Mobile responsive user journey
+- Error handling and recovery scenarios
+
+### 6. New Page Objects Created
+- **ProductPage.js**: Product browsing, search, details, reviews
+- **ContactPage.js**: Contact form functionality
+- **SubscriptionPage.js**: Newsletter subscription features
+- **NavigationPage.js**: Website navigation and UI elements
+
+### 7. Enhanced Test Data
+Extended `testData.js` with:
+- Contact form data
+- Product review data
+- Search terms (valid/invalid/partial)
+- Subscription email generation
+- Test file paths for uploads
+
+## Test Coverage Summary
+
+### **Total Test Suites**: 8 optimized suites
+1. **Login Tests** (2 tests) - ✅ Working
+2. **Signup Tests** (2 tests) - ⚠️ Needs unique email generation
+3. **Category Products** (1 test) - ⚠️ Needs selector fixes
+4. **Place Order** (3 tests) - ✅ Framework ready
+5. **Product Search** (7 tests) - 🆕 New comprehensive suite
+6. **Contact Us** (4 tests) - 🆕 New comprehensive suite
+7. **Subscription** (4 tests) - 🆕 New comprehensive suite
+8. **Navigation & UI** (10 tests) - 🆕 New comprehensive suite
+9. **E2E Workflows** (7 tests) - 🆕 New comprehensive suite
+
+### **Test Categories by Priority**:
+- **@smoke**: Critical functionality tests (8 tests)
+- **@functional**: Feature-specific tests (15 tests)
+- **@regression**: Edge cases and validation (12 tests)
+- **@e2e**: End-to-end user workflows (7 tests)
+
+### **Coverage Areas**:
+✅ User Authentication (Login/Signup)
+✅ Product Management (Search, Browse, Details, Reviews)
+✅ Shopping Cart Functionality
+✅ Checkout and Payment Process
+✅ Contact and Support Features
+✅ Newsletter Subscription
+✅ Website Navigation and UI
+✅ Responsive Design Testing
+✅ Cross-browser Compatibility
+✅ Error Handling and Validation
+✅ End-to-End User Journeys
+
+## Running the New Test Suites
+
+### Run All Optimized Tests:
+```bash
+npx playwright test --config=playwright.config.js practice/optimized/ --headed
+```
+
+### Run Specific Test Suites:
+```bash
+# Product functionality
+npx playwright test --config=playwright.config.js practice/optimized/productSearch.spec.js
+
+# Contact and subscription
+npx playwright test --config=playwright.config.js practice/optimized/contactUs.spec.js
+npx playwright test --config=playwright.config.js practice/optimized/subscription.spec.js
+
+# Navigation and UI
+npx playwright test --config=playwright.config.js practice/optimized/navigation.spec.js
+
+# End-to-end workflows
+npx playwright test --config=playwright.config.js practice/optimized/e2eWorkflows.spec.js
+```
+
+### Run Tests by Tags:
+```bash
+# Run only smoke tests
+npx playwright test --config=playwright.config.js practice/optimized/ --grep "@smoke"
+
+# Run only functional tests
+npx playwright test --config=playwright.config.js practice/optimized/ --grep "@functional"
+
+# Run only e2e tests
+npx playwright test --config=playwright.config.js practice/optimized/ --grep "@e2e"
+```
+
 ## Next Steps
 
-1. Migrate remaining test files to use the new structure
-2. Add more page objects as needed for other functionality
-3. Extend test data with additional scenarios
-4. Add more utility functions based on common patterns
-5. Consider implementing fixtures for common test setup
+1. Fix remaining selector issues in category and signup tests
+2. Implement unique email generation for signup tests
+3. Add API testing capabilities
+4. Implement visual regression testing
+5. Add performance testing scenarios
+6. Create CI/CD pipeline integration
+7. Add test reporting and analytics
+8. Implement parallel test execution optimization
