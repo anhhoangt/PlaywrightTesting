@@ -5,7 +5,7 @@ class LoginPage extends BasePage {
   constructor(page) {
     super(page);
 
-    // Selectors
+    // Selectors..
     this.signupLoginLink = "text=Signup / Login";
     this.loginEmailInput = 'input[data-qa="login-email"]';
     this.passwordInput = 'input[name="password"]';
