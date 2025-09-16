@@ -9,7 +9,7 @@ test("verify Address Details in Checkout Page @regression", async ({
   // Click 'Signup / Login' button
   await page.getByRole("link", { name: " Signup / Login" }).click();
 
-  // Fill all details in Signup and create account
+  // Fill all details in Signup and create account.
   await page.getByPlaceholder("Name").click();
   await page.getByPlaceholder("Name").fill("Kaylee");
   await page.locator('input[data-qa="signup-email"]').click();
