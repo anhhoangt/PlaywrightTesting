@@ -6,7 +6,7 @@ test("verify Address Details in Checkout Page @regression", async ({
   await page.goto("/");
   await expect(page).toHaveURL("https://automationexercise.com/");
 
-  // Click 'Signup / Login' button
+  // Click 'Signup / Login' button.
   await page.getByRole("link", { name: " Signup / Login" }).click();
 
   // Fill all details in Signup and create account.
