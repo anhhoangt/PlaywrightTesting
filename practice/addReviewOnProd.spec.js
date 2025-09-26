@@ -4,7 +4,7 @@ test("Add review on product @regression", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveURL("https://automationexercise.com/");
 
-  // Click on 'Products' button
+  // Click on 'Products' button..
   await page.getByRole("link", { name: " Products" }).click();
 
   // Verify user is navigated to ALL PRODUCTS page successfully
