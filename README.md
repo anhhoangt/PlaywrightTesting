@@ -2,7 +2,7 @@ Project Type:
 This is a Playwright-based end-to-end (E2E) testing framework setup. It's not a standalone application, but rather a tool for automating browser tests.
 
 Tech Stack:
-- Playwright: E2E testing framework
+- Playwright: E2E testing framework.
 - TypeScript (potentially, based on playwright.config.ts)
 - JavaScript (based on playwright.config.js)
 - Node.js (runtime environment)..........
