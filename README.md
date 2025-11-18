@@ -5,7 +5,7 @@ Tech Stack:
 - Playwright: E2E testing framework.
 - TypeScript (potentially, based on playwright.config.ts)
 - JavaScript (based on playwright.config.js)
-- Node.js (runtime environment)................................................
+- Node.js (runtime environment).................................................
 
 Architecture:
 The architecture is that of a testing framework. It uses Playwright's API to interact with browsers and assert expected behaviors. There isn't a traditional application architecture like MVC or microservices. The core is a test runner that orchestrates browser interactions and assertions.
