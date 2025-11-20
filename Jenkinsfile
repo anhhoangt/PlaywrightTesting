@@ -1,9 +1,12 @@
 pipeline {
     agent any
+    
+    tools {
+        nodejs 'Node 18'
+    }
 
     environment {
         // Define environment variables
-        NODE_VERSION = '18'
         CI = 'true'
     }
 
