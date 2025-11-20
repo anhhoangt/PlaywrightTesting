@@ -6,7 +6,8 @@
   "scripts": {
     "test:chrome": "npx playwright test --config=playwright.config.js --project=Chrome",
     "test:firefox": "npx playwright test --config=playwright.config.js --project=Firefox",
-    "test:webkit": "npx playwright test --config=playwright.config.js --project=WebKit"
+    "test:webkit": "npx playwright test --config=playwright.config.js --project=WebKit",
+    "test:ci": "playwright test --config=playwright.config.js --reporter=html"
   },
   "author": "",
   "license": "ISC",
